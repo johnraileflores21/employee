@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        <h3 align="center" class="mt-5">Employee Management</h3>
+        <h3 align="center" style="margin-bottom: 50px;">Employee Management</h3>
 
         <div class="row">
             <div class="col-md-2">
@@ -25,16 +25,14 @@
                         <div class="col-md-6">
                             <label>Employee DOB</label>
                             <input type="date" class="form-control" name="DOB">
-
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <label>Phone</label>
                             <input type="text" class="form-control" name="phone">
 
                         </div>
                     </div>
+                    
                     <div class="row">
                         <div class="col-md-12 mt-3">
                             <input type="submit" class="btn btn-info" value="Register">

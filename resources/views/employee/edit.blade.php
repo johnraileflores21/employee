@@ -4,7 +4,7 @@
 
     <div class="container">
 
-        <h3 align="center" class="mt-5">Employee Management</h3>
+        <h3 align="center" style="margin-bottom: 50px;">Employee Management</h3>
 
         <div class="row">
             <div class="col-md-2">
@@ -17,20 +17,24 @@
                   @method("PATCH")
                     <div class="row">
                         <div class="col-md-6">
-                            <label>Student Name</label>
+                            <label>Student First Name</label>
                             <input type="text" class="form-control" name="firstname" value="{{ $employee->firstname }}">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Student Last Name</label>
                             <input type="text" class="form-control" name="lastname" value="{{ $employee->lastname }}">
                         </div>
                         <div class="col-md-6">
                             <label>Student DOB</label>
                             <input type="date" class="form-control" name="DOB" value="{{ $employee->DOB }}">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <label>Address</label>
                             <input type="text" class="form-control" name="phone" value="{{ $employee->phone }}">
                         </div>
+                    </div>
+                    <div class="row">
+                        
 
                     </div>
                     <div class="row">
