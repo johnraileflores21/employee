@@ -12,7 +12,7 @@
             <div class="col-md-8">
 
             <div class="form-area">
-                <form method="POST">
+                <form method="POST" action="{{ route('employee.store') }}">
                     @csrf
                     <div class="row">
                         <div class="col-md-6">
@@ -25,14 +25,16 @@
                         <div class="col-md-6">
                             <label>Employee DOB</label>
                             <input type="date" class="form-control" name="DOB">
+
                         </div>
-                        <div class="col-md-6">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
                             <label>Phone</label>
                             <input type="text" class="form-control" name="phone">
 
                         </div>
                     </div>
-            
                     <div class="row">
                         <div class="col-md-12 mt-3">
                             <input type="submit" class="btn btn-info" value="Register">
@@ -55,7 +57,24 @@
                     </thead>
                     <tbody>
 
-                
+                    @foreach($employers as $employee)
+                        <tr>
+                        <td>{{ $employee->id }}</td>
+                            <td>{{ $employee->firstname }}</td>
+                            <td>{{ $employee->lastname }}</td>
+                            <td>{{ $employee->DOB }}</td>
+                            <td>{{ $employee->phone }}</td>
+                            <td>
+                            <a href="{{ url('employees/' . $employee->id . '/edit') }}" class="btn btn-success btn-sm">Edit</a>
+                            <a href="{{ url('employees/' . $employee->id . '/delete') }}" class="btn btn-danger btn-sm">Delete</a>
+                            </form>
+                            </td>
+
+                          </tr>
+
+                        @endforeach
+
+
 
 
                     </tbody>
